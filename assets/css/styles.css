@@ -98,6 +98,7 @@ header .bookingInfo {
 
 header .bookingInfo section {
     padding: 20px 65px;
+    padding: 2vh 4.5vw;
     border-left: 1px solid var(--red);
     background-color: var(--white);
     color: var(--red);
@@ -117,8 +118,18 @@ header .bookingInfo section:last-child {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 812px) {
+    nav {
+        display: none;
+    }
+
+    .bookingInfo {
+        display: none;
+    }
+}
+
 main {
-    margin: 5vw;
+    margin: 5vw 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -131,7 +142,8 @@ main .textBox:first-child {
     gap: 50px;
 }
 
-main .textBox:first-child section:first-child {
+main .textBox:first-child {
+    margin: 0 5vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -139,6 +151,7 @@ main .textBox:first-child section:first-child {
 }
 
 main .autocamperDisplay {
+    margin: 0 0 0 5vw;
     display: grid;
     grid-template-columns: 40% 40% 40%;
     gap: 50px;
@@ -154,24 +167,37 @@ main .autocamperDisplay .autocamper {
     width: 100%;
 }
 
-main .infoBox {
+main .autocamperDisplay .autocamper section:first-child {
+    position: relative;
+}
+
+main .autocamperDisplay .autocamper .autocamperPrice {
+    padding: 25px 50px;
+    width: fit-content;
+    background-color: #EDE8DC;
+    position: absolute;
+    bottom: 25px;
+}
+
+main .autocamperDisplay .autocamper .infoBox {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-main .infoBox section {
+main .autocamperDisplay .autocamper .infoBox section {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 
-main .infoBox section p {
+main .autocamperDisplay .autocamper .infoBox section p {
     font-size: 14px;
 }
 
 main .textBox {
+    margin: 0 5vw;
     display: flex;
     justify-content: space-between;
     gap: 100px;
@@ -198,6 +224,32 @@ button {
     text-transform: uppercase;
     font-size: 14px;
     border: none;
+}
+
+main .instagramGallery {
+    background-color: var(--red);
+    padding: 7vw 5vw;
+    display: flex;
+    gap: 2.5vw;
+}
+
+main .instagramGallery section {
+    position: relative;
+}
+
+main .instagramGallery section svg {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+}
+
+main .instagramGallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+   -webkit-mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 footer {
