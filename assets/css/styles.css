@@ -52,6 +52,25 @@ a {
     color: var(--white);
 }
 
+@media screen and (max-width: 812px) {
+    h1 {
+        font-size: 50px;
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 23px;
+    }
+}
+
 header {
     background-image: linear-gradient(0deg, rgba(33, 33, 33, 0.734), rgba(45, 45, 45, 0.706)), url('../images/toms-rits-ryfptJi3fAM-unsplash.png');
     background-repeat: no-repeat;
@@ -92,6 +111,10 @@ header .heroText {
     margin: auto;
 }
 
+header .heroText button {
+    display: none;
+}
+
 header .bookingInfo {
     display: flex;
 }
@@ -118,13 +141,59 @@ header .bookingInfo section:last-child {
     text-transform: uppercase;
 }
 
+.mobileTop {
+    display: none;
+}
+
 @media screen and (max-width: 812px) {
+    header {
+        background-image: linear-gradient(0deg, rgba(33, 33, 33, 0.2), rgba(45, 45, 45, 0.2)), url('../images/toms-rits-ryfptJi3fAM-unsplash.png');
+        height: 70vh;
+        justify-content: space-between;
+    }
+
+    header .heroText {
+        text-align: left;
+        width: auto;
+        margin: 15vw 5vw;
+    }
+
+    header .heroText button {
+        display: block;
+    }
+
     nav {
         display: none;
     }
 
-    .bookingInfo {
+    header .bookingInfo {
         display: none;
+    }
+
+    .mobileTop {
+        display: block;
+        margin: 5vw;
+    }
+
+    .mobileTop .searchbar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--white);
+        margin-top: 20px;
+        border: none;
+        color: #C0C0C0;
+        padding: 20px 30px;
+        border-radius: 50px;
+        width: auto;
+    }
+
+    .mobileTop .searchbar input {
+        border: none;
+    }
+
+    .mobileTop .searchbar input:active {
+        border: none;
     }
 }
 
@@ -148,6 +217,10 @@ main .textBox:first-child {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+main .textBox h3:nth-child(2) {
+    display: none;
 }
 
 main .autocamperDisplay {
@@ -196,6 +269,10 @@ main .autocamperDisplay .autocamper .infoBox section p {
     font-size: 14px;
 }
 
+main .autocamperDisplay .autocamper .description {
+    width: 50px;
+}
+
 main .textBox {
     margin: 0 5vw;
     display: flex;
@@ -229,7 +306,9 @@ button {
 main .instagramGallery {
     background-color: var(--red);
     padding: 7vw 5vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 2.5vw;
 }
 
@@ -250,6 +329,93 @@ main .instagramGallery img {
     object-fit: cover;
     mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
    -webkit-mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+@media screen and (max-width: 812px) {
+    main {
+        gap: 50px;
+    }
+
+    main .textBox {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    main .textBox:nth-child(3) {
+        flex-direction: column;
+    }
+
+    main .textBox article { 
+        width: 100%;
+    }
+
+    main .textBox article p {
+        width: 100%;
+    }
+    
+    main .textBox img {
+        width: 100%;
+    }
+
+    main .textBox h3:nth-child(1) {
+        display: none;
+    }
+
+    main .textBox h3:nth-child(2) {
+        display: block;
+    }
+
+    main .textBox:first-child {
+        align-items: flex-end;
+    }
+
+    main .textBox:first-child h2 {
+        margin-bottom: 0;
+    }
+
+    main .textBox:first-child button {
+        background-color: transparent;
+        height: auto;
+        color: black;
+    }
+
+    main .autocamperDisplay {
+        margin: 0 0 0 5vw;
+        display: grid;
+        grid-template-columns: 80% 80% 80%;
+        gap: 50px;
+        overflow: auto;
+        white-space: nowrap;
+    }
+    
+    main .autocamperDisplay .autocamperImg {
+        width: 100%;
+    }
+
+    main .autocamperDisplay .autocamper .autocamperPrice {
+        padding: 15px 35px;
+    }
+
+    main .autocamperDisplay .autocamper .infoBox section svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    main .autocamperDisplay .autocamper .infoBox section p {
+        font-size: 12px;
+    }
+
+    button {
+        margin: 0;
+        height: 70px;
+        width: 170px;
+    }
+
+    main .instagramGallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 footer {
@@ -278,4 +444,11 @@ footer ul li {
 footer p:last-child {
     margin: auto;
     margin-bottom: 25px;
+}
+
+@media screen and (max-width: 812px) {
+    footer section {
+        display: flex;
+        flex-direction: column;
+    }
 }
