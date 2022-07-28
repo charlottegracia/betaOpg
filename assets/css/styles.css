@@ -52,6 +52,11 @@ a {
     color: var(--white);
 }
 
+a:hover {
+    text-decoration: underline;
+    color: var(--white);
+}
+
 @media screen and (max-width: 812px) {
     h1 {
         font-size: 50px;
@@ -141,6 +146,12 @@ header .bookingInfo section:last-child {
     background-color: var(--red);
     color: var(--white);
     text-transform: uppercase;
+    transition: 0.2s;
+}
+
+header .bookingInfo section:last-child:hover {
+    background-color: var(--white);
+    color: var(--red);
 }
 
 .mobileTop {
@@ -269,11 +280,15 @@ main .autocamperDisplay {
     grid-template-columns: 40% 40% 40%;
     gap: 50px;
     overflow: auto;
-    white-space: nowrap;
 }
 
 main .autocamperDisplay .autocamperImg {
     width: 100%;
+    transition: 0.5s;
+}
+
+main .autocamperDisplay .autocamperImg:hover {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
 }
 
 main .autocamperDisplay .autocamper {
@@ -310,7 +325,7 @@ main .autocamperDisplay .autocamper .infoBox section p {
 }
 
 main .autocamperDisplay .autocamper .description {
-    hyphens: auto;
+    max-width: 350px;
 }
 
 main .textBox {
@@ -342,6 +357,13 @@ button {
     text-transform: uppercase;
     font-size: 14px;
     border: none;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--red);
+    border: 1px solid var(--red);
 }
 
 main .instagramGallery {
@@ -425,8 +447,6 @@ main .instagramGallery img {
         display: grid;
         grid-template-columns: 80% 80% 80%;
         gap: 50px;
-        overflow: auto;
-        white-space: nowrap;
     }
     
     main .autocamperDisplay .autocamperImg {
@@ -485,6 +505,10 @@ footer ul li {
 footer p:last-child {
     margin: auto;
     margin-bottom: 25px;
+}
+
+footer section article:nth-child(2) a, footer section article:nth-child(4) a {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 812px) {
