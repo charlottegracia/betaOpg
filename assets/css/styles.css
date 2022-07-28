@@ -200,7 +200,7 @@ header .bookingInfo section:last-child:hover {
 @media screen and (max-width: 812px) {
     header {
         background-image: linear-gradient(0deg, rgba(33, 33, 33, 0.2), rgba(45, 45, 45, 0.2)), url('../images/toms-rits-ryfptJi3fAM-unsplash.png');
-        height: 70vh;
+        height: fit-content;
         justify-content: space-between;
     }
 
@@ -246,6 +246,12 @@ header .bookingInfo section:last-child:hover {
 
     .mobileTop .searchbar input:active {
         border: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 70vh;
     }
 }
 
@@ -398,6 +404,12 @@ main .instagramGallery img {
 @media screen and (max-width: 812px) {
     main {
         gap: 50px;
+    }
+
+    main section:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
     }
 
     main .textBox {
