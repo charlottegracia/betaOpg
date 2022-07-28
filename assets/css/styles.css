@@ -54,6 +54,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    text-underline-position: under;
     color: var(--white);
 }
 
