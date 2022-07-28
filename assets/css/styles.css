@@ -113,6 +113,8 @@ header .heroText {
 
 header .heroText button {
     display: none;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 header .bookingInfo {
@@ -143,6 +145,44 @@ header .bookingInfo section:last-child {
 
 .mobileTop {
     display: none;
+}
+
+.mobileMenu {
+    padding: 5vw;
+    background-color: var(--red);
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+.mobileMenu::-webkit-scrollbar {
+    display: none;
+}
+
+.mobileMenu ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.mobileMenu ul li {
+    list-style-type: none;
+}
+
+.mobileMenu ul li:nth-child(5), .mobileMenu ul li:nth-child(7) {
+    margin-bottom: 25px;
+}
+
+.mobileMenu ul li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 812px) {
@@ -270,7 +310,7 @@ main .autocamperDisplay .autocamper .infoBox section p {
 }
 
 main .autocamperDisplay .autocamper .description {
-    width: 50px;
+    hyphens: auto;
 }
 
 main .textBox {
@@ -290,6 +330,7 @@ main .textBox article p {
 
 main .textBox img {
     width: 40%;
+    object-fit: cover;
 }
 
 button {
